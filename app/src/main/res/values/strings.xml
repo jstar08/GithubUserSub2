@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GithubUser</string>
+    <string name="github_user">GitHub User</string>
+    <string name="company_logo">company logo</string>
+    <string name="location_logo">location logo</string>
+    <string name="repository_logo">repository logo</string>
+    <string name="user_image">User Image</string>
+    <string name="search_hint">search</string>
+    <string name="action_back">back</string>
+    <string name="username">Username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="empty_user_list">Not Found</string>
+
+    <string name="n_followers">%s Followers</string>
+    <string name="n_following">%s Following</string>
+    <string name="no_company">No Company</string>
+    <string name="no_location">Unknown</string>
+    <string name="followers">Followers (%s)</string>
+    <string name="following">Following (%s)</string>
+    <string name="repository">%s Repostories</string>
+
+    <string name="language_preference">Change Language</string>
+</resources>

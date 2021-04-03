@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GithubUser</string>
+    <string name="github_user">GitHub User</string>
+    <string name="company_logo">logo perusahaan</string>
+    <string name="location_logo">logo lokasi</string>
+    <string name="repository_logo">logo repository</string>
+    <string name="user_image">gambar pengguna</string>
+    <string name="search_hint">cari</string>
+    <string name="action_back">kembali</string>
+    <string name="username">Nama Pengguna</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="empty_user_list">Tidak Ditemukan</string>
+
+    <string name="n_followers">%s Pengikut</string>
+    <string name="n_following">%s Mengikuti</string>
+    <string name="no_company">Tidak ada Perusahaan</string>
+    <string name="no_location">Tidak diketahui</string>
+    <string name="followers">Pengikut (%s)</string>
+    <string name="following">Mengikuti (%s)</string>
+    <string name="repository">%s Projek</string>
+
+    <string name="language_preference">Ganti Bahasa</string>
+</resources>

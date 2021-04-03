@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_actionBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/action_back"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/design_default_color_on_primary" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/iv_actionBack" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_avatar"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/username"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/cv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                tools:text="Name" />
+
+            <ImageView
+                android:id="@+id/iv_company"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/company_logo"
+                android:src="@drawable/ic_baseline_home_work_24"
+                app:layout_constraintStart_toEndOf="@id/cv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_company"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                tools:text="Company" />
+
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/location_logo"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintStart_toEndOf="@id/cv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_location"
+                app:layout_constraintTop_toBottomOf="@id/tv_company"
+                tools:text="Location" />
+
+            <ImageView
+                android:id="@+id/iv_repository"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/repository_logo"
+                android:src="@drawable/ic_baseline_insert_drive_file_24"
+                app:layout_constraintStart_toEndOf="@id/cv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+            <TextView
+                android:id="@+id/tv_repository"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_repository"
+                app:layout_constraintTop_toBottomOf="@id/tv_location"
+                tools:text="Repository" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:tabMode="fixed"
+                app:tabTextColor="#616161" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tabLayout_detail" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
